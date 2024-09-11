@@ -3,8 +3,8 @@ import AWS from 'aws-sdk';
 
 // Configure AWS SES
 AWS.config.update({
-  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  accessKeyId: process.env.MYAPP_ACCESS_KEY_ID,
+  secretAccessKey: process.env.MYAPP_SECRET_ACCESS_KEY,
   region: 'us-east-1', // e.g., 'us-east-1'
 });
 
