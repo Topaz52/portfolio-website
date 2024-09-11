@@ -103,7 +103,7 @@ const EmailSection = () => {
                     Let&apos;s Connect
                 </h5>
                 <p className='text-slate-300 mb-4 max-w-md text-center'>
-                    I'm currently looking for new opportunities, my inbox is always open.
+                    I&apos;m currently looking for new opportunities, my inbox is always open.
                 </p>
                 <div className='bg-primary-800 p-8 rounded-lg'>
                     <form className='flex flex-col' onSubmit={handleSubmit}>
