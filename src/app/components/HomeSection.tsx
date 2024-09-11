@@ -4,6 +4,7 @@ import Image from 'next/image'
 import FacebookIcon from '/public/icons8-facebook.svg'
 import LinkedInIcon from '/public/icons8-linkedin.svg'
 import GithubIcon from '/public/icons8-github.svg'
+import ProfilePic from '/public/images/profile-pic.png'
 import Link from 'next/link'
 import { motion } from "framer-motion"
 import { useState } from 'react';
@@ -33,7 +34,7 @@ const HomeSection = () => {
                 <div className='place-self-center'>
                     <div className="relative rounded-full bg-primary-500 w-[180px] h-[180px] flex items-center justify-center">
                         <Image
-                            src='/images/profile-pic.png'
+                            src={ProfilePic}
                             alt='Profile Pic'
                             className='rounded-full'
                             width={180}
