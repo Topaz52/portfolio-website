@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const colors = require("tailwindcss/colors")
 
 const config: Config = {
   content: [
@@ -8,11 +9,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
     },
+    colors:{
+      ...colors,
+      primary: colors.purple,
+      secondary: colors.pink,
+    }
   },
   plugins: [],
 };
