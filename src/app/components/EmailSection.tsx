@@ -100,10 +100,10 @@ const EmailSection = () => {
         <section id='contacts' className='flex flex-col items-center justify-center py-14 md:py-20'>
             <motion.div animate={controls} ref={sectionRef}>
                 <h5 className='lg:text-2xl text-xl font-bold text-white my-2 text-center'>
-                    Let's Connect
+                    Let&apos Connect
                 </h5>
                 <p className='text-slate-300 mb-4 max-w-md text-center'>
-                    I'm currently looking for new opportunities, my inbox is always open.
+                    I&aposm currently looking for new opportunities, my inbox is always open.
                 </p>
                 <div className='bg-primary-800 p-8 rounded-lg'>
                     <form className='flex flex-col' onSubmit={handleSubmit}>

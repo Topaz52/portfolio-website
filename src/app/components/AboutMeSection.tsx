@@ -105,8 +105,8 @@ const AboutMeSection = () => {
                         ABOUT ME
                     </h2>
                     <p className='text-sm font-thin text-justify text-slate-300'>
-                        I'm ISMAIL, a data science student fuelled by a passion for uncovering insights from data.
-                        While I'm still early in my journey, I possess a foundational understanding of Python, a most used data scientist languages.
+                        I&aposm ISMAIL, a data science student fuelled by a passion for uncovering insights from data.
+                        While I&aposm still early in my journey, I possess a foundational understanding of Python, a most used data scientist languages.
                         Some libraries that I familiar with are Pandas, Numpy, Seaborn, Tensorflow, and MatPlotLib.
                         I am eager to leverage this knowledge alongside my data analysis skills to contribute to impactful projects.
                         In my free time, I enjoy doing Leet Code, which I find helps me approach problems from different angles.
