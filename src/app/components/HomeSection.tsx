@@ -18,11 +18,12 @@ const HomeSection = () => {
         // Simulate download delay (for example, 2 seconds)
         setTimeout(() => {
             const link = document.createElement('a');
-            link.href = '/public/ISMAIL_Resume.pdf'; // Replace with your file path
-            link.download = 'ISMAIL_Resume.pdf';
+            link.href = 'https://save2s3.s3.amazonaws.com/ISMAIL_Resume.pdf'; // Public S3 URL
+            link.target = '_blank'; // Open in new tab
+            link.rel = 'noopener noreferrer'; // Security best practice for new tabs
             link.click();
             setLoading(false);
-        }, 2000); // Simulate a 2-second download
+        }, 2000);
     };
     return (
         <section>
