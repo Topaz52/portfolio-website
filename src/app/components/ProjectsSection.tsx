@@ -11,8 +11,6 @@ const projectsData = [
         description: "This project used machine learning to determine if a website is safe. It found that deep learning models, especially Bi-LSTM, were most accurate at detecting phishing websites.",
         urlLink: "https://github.com/Topaz52/Phishing-Website-Detection-using-RNN-FYP-",
         githubLink: "https://github.com/Topaz52/Phishing-Website-Detection-using-RNN-FYP-"
-        urlLink: "https://github.com/Topaz52/Phishing-Website-Detection-using-RNN-FYP-",
-        githubLink: "https://github.com/Topaz52/Phishing-Website-Detection-using-RNN-FYP-"
     },
     {
         id: 2,
@@ -20,15 +18,11 @@ const projectsData = [
         description: "This project created a device that tracks things using GPS and sends their location via text messages. It uses sensors and a microcontroller to determine location and orientation. The device is useful for preventing theft.",
         urlLink: "https://github.com/Topaz52/Asset-Tracking-IOT",
         githubLink: "https://github.com/Topaz52/Asset-Tracking-IOT"
-        urlLink: "https://github.com/Topaz52/Asset-Tracking-IOT",
-        githubLink: "https://github.com/Topaz52/Asset-Tracking-IOT"
     },
     {
         id: 3,
         title: "Heart Disease using Fuzzy",
         description: "Fuzzy logic can help doctors diagnose heart disease more accurately. It considers multiple factors, like heartbeats and medical history, to provide a better understanding of a patient's risk. This is especially helpful for people who might not have obvious symptoms.",
-        urlLink: "https://github.com/Topaz52/Heart-Disease-using-fuzzy",
-        githubLink: "https://github.com/Topaz52/Heart-Disease-using-fuzzy"
         urlLink: "https://github.com/Topaz52/Heart-Disease-using-fuzzy",
         githubLink: "https://github.com/Topaz52/Heart-Disease-using-fuzzy"
     },
@@ -101,7 +95,6 @@ const ProjectsSection = () => {
                                 title={project.title}
                                 description={project.description}
                                 urlLink={project.urlLink}
-                                githubLink={project.githubLink}
                                 githubLink={project.githubLink}
                             />
                         )}
