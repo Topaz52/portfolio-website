@@ -43,9 +43,9 @@ const projectsData = [
     {
         id: 6,
         title: "Personal Portfolio Website",
-        description: "A personal portfolio website, built using Next.js! This site highlights my skills, showcases my projects, and features my achievements. I apologize for not being able to provide access to the project repository, as it contains sensitive information like API keys.",
+        description: "A personal portfolio website, built using Next.js! This site highlights my skills, showcases my projects, and features my achievements.",
         urlLink: "https://ismailmasseran.com/",
-        githubLink: "https://github.com/Topaz52"
+        githubLink: "https://github.com/Topaz52/portfolio-website"
     },
 ]
 
