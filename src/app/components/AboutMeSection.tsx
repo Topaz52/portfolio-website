@@ -46,7 +46,7 @@ const timelineData = [
     },
     {
         id: 5,
-        location: "MYCES Sdn. Bhd.",
+        location: "MYCES Sdn. Bhd., Kajang",
         endDate: "Mac 2024 - June 2024",
         course: "Internship",
         achieveList: [

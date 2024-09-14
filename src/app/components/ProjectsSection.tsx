@@ -36,8 +36,15 @@ const projectsData = [
     {
         id: 5,
         title: "Save to Amazon S3 Storage Telegram Bot",
-        description: "This bot allows you to upload files sent via Telegram directly to Amazon S3 storage. Simply send a file to the bot, and it will handle the upload to your S3 bucket, providing a secure and efficient way to manage your files in the cloud. Containerize the application using Docker and deploy it on Google Cloud Platform with Google Artifact Registry and Cloud Run.",
+        description: "This bot allows you to upload files sent via Telegram directly to Amazon S3 storage. Simply send a file to the bot, and it will handle the upload to your S3 bucket, providing a secure and efficient way to manage your files in the cloud. Containerize the application using Docker and deploy it on Google Cloud Platform with Google Artifact Registry and Cloud Run. I apologize for not uploading any repositories in order to protect sensitive credential keys.",
         urlLink: "https://t.me/Save2S3Bot",
+        githubLink: "https://github.com/Topaz52"
+    },
+    {
+        id: 6,
+        title: "Personal Portfolio Website",
+        description: "A personal portfolio website, built using Next.js! This site highlights my skills, showcases my projects, and features my achievements. I apologize for not being able to provide access to the project repository, as it contains sensitive information like API keys.",
+        urlLink: "https://ismailmasseran.com/",
         githubLink: "https://github.com/Topaz52"
     },
 ]
