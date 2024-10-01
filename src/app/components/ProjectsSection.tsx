@@ -9,7 +9,7 @@ const projectsData = [
         id: 1,
         title: "Phishing Website Detection",
         description: "This project used machine learning to determine if a website is safe. It found that deep learning models, especially Bi-LSTM, were most accurate at detecting phishing websites.",
-        urlLink: "https://github.com/Topaz52/Phishing-Website-Detection-using-RNN-FYP-",
+        urlLink: "https://projects.ismailmasseran.com/",
         githubLink: "https://github.com/Topaz52/Phishing-Website-Detection-using-RNN-FYP-"
     },
     {
