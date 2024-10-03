@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import NavLink from './NavLink'
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
 import MenuOverlay from './MenuOverlay'
+import Image from 'next/image'
 
 const navLinks = [
     {
@@ -20,8 +21,18 @@ const navLinks = [
     },
     {
         title: "BLOG",
-        path: "#contacts",
-    },
+        path: "https://blog.ismailmasseran.com/",
+        icon: (
+            <Image
+                src="/icons8-new-tab.svg"
+                alt="New Tab"
+                width={16}
+                height={16}
+                className="ml-1"
+            />
+        ),
+        target: "_blank"
+    }
 ]
 
 const NavBar = () => {
@@ -29,7 +40,15 @@ const NavBar = () => {
     return (
         <nav className='fixed mx-auto top-0 left-0 right-0 z-10 bg-primary-950 border border-b-primary-900 border-t-transparent border-l-transparent border-r-transparent'>
             <div className='flex flex-wrap items-center justify-between mx-auto px-5 py-3'>
-                <Link href={"#top"} className='text-base md:text-2xl text-white font-semibold'>HOME</Link>
+                <Link href={"#top"} className='text-base md:text-2xl text-white font-semibold'>
+                    <Image
+                        src="/images/logo.svg"  // Path to your logo image
+                        alt="Logo"              // Alt text for accessibility
+                        width={50}              // Adjust width as needed
+                        height={50}             // Adjust height as needed
+                        className='md:w-50 md:h-50' // Optional: adjust size on larger screens
+                    />
+                </Link>
                 <div className='mobile-menu block md:hidden'>
                     {
                         !navbarOpen ? (
@@ -48,7 +67,7 @@ const NavBar = () => {
                         {
                             navLinks.map((link, index) => (
                                 <li key={index}>
-                                    <NavLink href={link.path} title={link.title} />
+                                    <NavLink href={link.path} title={link.title} icon={link.icon} target={link.target} />
                                 </li>
                             ))
                         }

@@ -47,6 +47,13 @@ const projectsData = [
         urlLink: "https://ismailmasseran.com/",
         githubLink: "https://github.com/Topaz52/portfolio-website"
     },
+    {
+        id: 7,
+        title: "Personal Blog",
+        description: "Discover my personal blog website, a space dedicated to sharing my thoughts, projects, and insights in technology, data science, and web development. Here, you'll find engaging articles, tutorials, and reflections on my journey, designed to inspire and inform fellow tech enthusiasts and learners. Join me in exploring the ever-evolving world of technology through my unique perspective! Built using Next.js.",
+        urlLink: "https://blog.ismailmasseran.com/",
+        githubLink: "https://github.com/Topaz52/personal-blog"
+    },
 ]
 
 const ProjectsSection = () => {
