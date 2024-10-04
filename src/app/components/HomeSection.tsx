@@ -5,6 +5,7 @@ import FacebookIcon from '/public/icons8-facebook.svg'
 import LinkedInIcon from '/public/icons8-linkedin.svg'
 import GithubIcon from '/public/icons8-github.svg'
 import ProfilePic from '/public/images/profile-pic.png'
+import MailIcon from '/public/icons8-mail.png'
 import Link from 'next/link'
 import { motion } from "framer-motion"
 import { useState } from 'react';
@@ -31,7 +32,7 @@ const HomeSection = () => {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="flex flex-col items-center">
+                className="flex flex-col items-center mt-3">
                 <div className='place-self-center'>
                     <div className="relative rounded-full bg-primary-500 w-[180px] h-[180px] flex items-center justify-center">
                         <Image
@@ -44,15 +45,15 @@ const HomeSection = () => {
                     </div>
                 </div>
                 <div className="col-span-5 place-self-center mt-8 text-center">
-                    <h1 className='text-white mb-4 text-2xl font-extrabold lg:text-5xl'>
+                    <h1 className='text-white mb-4 text-2xl font-extrabold lg:text-6xl'>
                         ISMAIL MASSERAN
                     </h1>
                     <h3 className='text-sm lg:text-sm mb-5 text-gray-400'>
-                        <a href="mailto:ismailmasseran1@gmail.com" className="hover:underline">
+                        {/* <a href="mailto:ismailmasseran1@gmail.com" className="hover:underline">
                             ismailmasseran1@gmail.com
-                        </a>
+                        </a> */}
                     </h3>
-                    <div className='socials flex flex-row lg:flex-col lg:top-1/3 lg:left-8 lg:absolute gap-5 justify-center mb-5'>
+                    <div className='socials flex flex-row lg:flex-col lg:top-1/4 lg:left-8 lg:absolute gap-5 justify-center mb-5'>
                         <Link href="https://github.com/Topaz52" target="_blank">
                             <Image src={GithubIcon} alt="Github Icon" />
                         </Link>
@@ -61,6 +62,9 @@ const HomeSection = () => {
                         </Link>
                         <Link href="https://www.facebook.com/ismailmasseran3/" target="_blank">
                             <Image src={FacebookIcon} alt="Facebook Icon" />
+                        </Link>
+                        <Link href="mailto:ismailmasseran1@gmail.com">
+                            <Image src={MailIcon} alt="Mail Icon" />
                         </Link>
                     </div>
                     <p className='text-md lg:text-xl font-extralight lg:max-w-xl mb-3'>

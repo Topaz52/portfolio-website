@@ -104,7 +104,7 @@ const AboutMeSection = () => {
                     <h2 className='text-3xl font-bold text-white mb-4 md:text-5xl'>
                         ABOUT ME
                     </h2>
-                    <p className='text-sm font-thin text-justify text-slate-300'>
+                    <p className='text-lg font-thin text-justify text-slate-200'>
                         I&apos;m ISMAIL, a data science student fuelled by a passion for uncovering insights from data.
                         While I&apos;m still early in my journey, I possess a foundational understanding of Python, a most used data scientist languages.
                         Some libraries that I familiar with are Pandas, Numpy, Seaborn, Tensorflow, and MatPlotLib.

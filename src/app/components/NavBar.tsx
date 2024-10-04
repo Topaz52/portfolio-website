@@ -8,19 +8,19 @@ import Image from 'next/image'
 
 const navLinks = [
     {
-        title: "ABOUT",
+        title: "About",
         path: "#about",
     },
     {
-        title: "PROJECTS",
+        title: "Projects",
         path: "#projects",
     },
     {
-        title: "CONTACTS",
+        title: "Contacts",
         path: "#contacts",
     },
     {
-        title: "BLOG",
+        title: "Blog",
         path: "https://blog.ismailmasseran.com/",
         icon: (
             <Image
@@ -39,7 +39,7 @@ const NavBar = () => {
     const [navbarOpen, setNavbaropen] = useState(false)
     return (
         <nav className='fixed mx-auto top-0 left-0 right-0 z-10 bg-primary-950 border border-b-primary-900 border-t-transparent border-l-transparent border-r-transparent'>
-            <div className='flex flex-wrap items-center justify-between mx-auto px-5 py-3'>
+            <div className='flex flex-wrap items-center justify-between mx-auto px-4 py-3 md:px-8'>
                 <Link href={"#top"} className='text-base md:text-2xl text-white font-semibold'>
                     <Image
                         src="/images/logo.svg"  // Path to your logo image
