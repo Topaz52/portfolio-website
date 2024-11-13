@@ -29,7 +29,7 @@ const TimelineFrame: React.FC<TimelineFrameProps> = ({ location, endDate, course
             {/* <!-- Card --> */}
             <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-primary-800 p-4 rounded border border-slate-200 shadow">
                 <div className="flex items-center justify-between space-x-2 mb-1">
-                    <div className="font-bold text-white">{location}</div>
+                    <div className="font-bold text-white text-xl">{location}</div>
                     <time className="font-caveat font-medium text-primary-100">{endDate}</time>
                 </div>
                 <div className="text-slate-300">

@@ -98,7 +98,7 @@ const ProjectsSection = () => {
     return (
         <section id='projects' className='justify-items-center py-7 lg:py-10'>
             <motion.div animate={controls} ref={sectionRef}>
-                <h1 className='text-center text-3xl md:text-5xl mt-5 font-bold p-5'>
+                <h1 className='text-center text-3xl md:text-5xl mt-5 font-bold p-5 text-white'>
                     PROJECTS
                 </h1>
                 <div className='flex flex-col items-center justify-center p-5'>

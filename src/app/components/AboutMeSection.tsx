@@ -56,11 +56,13 @@ const timelineData = [
     },
     {
         id: 6,
-        location: "Unemployed",
-        endDate: "June 2024 - Sep 2024",
-        course: "Unemployed",
+        location: "MAXVEC Sdn Bhd.",
+        endDate: "Nov 2024 -  Present",
+        course: "Protege - Programmer",
         achieveList: [
-            "Currently learning cloud computing skills from AWS",
+            "Gained proficiency in core Laravel concepts (Models, Views, Controllers) while contributing to the development of the bioAims web application.",
+            "Developed and documented procedures for deploying, backing up/restoring, and troubleshooting the bioAims application to ensure its reliability and stability.",
+            "Streamlined operational procedures related to application lifecycle management, minimizing downtime and improving efficiency."
         ]
     }
 ];
