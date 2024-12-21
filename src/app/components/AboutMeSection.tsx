@@ -56,13 +56,17 @@ const timelineData = [
     },
     {
         id: 6,
-        location: "MAXVEC Sdn Bhd.",
+        location: "MAXVEC Sdn Bhd., Wangsa Maju",
         endDate: "Nov 2024 -  Present",
         course: "Protege - Programmer",
         achieveList: [
-            "Gained proficiency in core Laravel concepts (Models, Views, Controllers) while contributing to the development of the bioAims web application.",
-            "Developed and documented procedures for deploying, backing up/restoring, and troubleshooting the bioAims application to ensure its reliability and stability.",
-            "Streamlined operational procedures related to application lifecycle management, minimizing downtime and improving efficiency."
+            "Assisted in deploying the bioAims web application on a local server using Windows Server IIS, ensuring proper configuration and functionality.",
+            "Gained proficiency in core Laravel concepts (Models, Views, Controllers).",
+            "Maintained the EKESAM legacy system, ensuring stability and ongoing functionality.",
+            "Optimized EKESAM dashboard loading times from 15 seconds to 2 seconds by integrating AJAX for improved performance."
+            // "Gained proficiency in core Laravel concepts (Models, Views, Controllers) while contributing to the development of the bioAims web application.",
+            // "Developed and documented procedures for deploying, backing up/restoring, and troubleshooting the bioAims application to ensure its reliability and stability.",
+            // "Streamlined operational procedures related to application lifecycle management, minimizing downtime and improving efficiency."
         ]
     }
 ];
@@ -107,11 +111,12 @@ const AboutMeSection = () => {
                         ABOUT ME
                     </h2>
                     <p className='text-lg font-thin text-justify text-slate-200'>
-                        I&apos;m ISMAIL, a data science student fuelled by a passion for uncovering insights from data.
-                        While I&apos;m still early in my journey, I possess a foundational understanding of Python, a most used data scientist languages.
-                        Some libraries that I familiar with are Pandas, Numpy, Seaborn, Tensorflow, and MatPlotLib.
-                        I am eager to leverage this knowledge alongside my data analysis skills to contribute to impactful projects.
-                        In my free time, I enjoy doing Leet Code, which I find helps me approach problems from different angles.
+                        I&apos;m ISMAIL, a data science student fueled by a passion for uncovering insights from data. While I&apos;m still early in my journey, I possess a
+                        foundational understanding of Python, one of the most widely used programming languages in data science. I am familiar with libraries such as Pandas,
+                        Numpy, Seaborn, TensorFlow, and Matplotlib. I am eager to leverage this knowledge alongside my data analysis skills to contribute to impactful projects.
+                        Currently, I am working at MAXVEC as a Protege Programmer, where I primarily work on projects utilizing Laravel and Symfony. I am also responsible for
+                        maintaining the EKESAM system, ensuring its stability and performance.
+                        In my free time, I enjoy solving challenges on LeetCode, which helps me approach problems from different angles and refine my problem-solving skills.
                     </p>
                 </div>
                 {/* Timeline Section */}
