@@ -13,9 +13,12 @@ const CertificatesSection = () => {
 
   return (
     <section className="py-5 text-center">
+      {/* Heading for BADGES AND CERTIFICATES */}
+      {/* Uncomment the heading if needed */}
       {/* <h1 className="text-center text-3xl md:text-5xl mb-5 font-bold p-5">BADGES AND CERTIFICATES</h1> */}
-      <div className='w-full md:w-[calc(50%-2.5rem)] bg-primary-400 p-4 rounded-xl shadow mx-auto'>
-        <div className="grid grid-cols-3 gap-4">
+      <div className="w-full md:w-[calc(50%-2.5rem)] bg-primary-400 p-4 rounded-xl shadow mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {/* Badge 1 */}
           <div className="flex justify-center items-center">
             <div
               data-iframe-width="180"
@@ -24,6 +27,7 @@ const CertificatesSection = () => {
               data-share-badge-host="https://www.credly.com"
             ></div>
           </div>
+          {/* Badge 2 */}
           <div className="flex justify-center items-center">
             <div
               data-iframe-width="180"
@@ -32,12 +36,14 @@ const CertificatesSection = () => {
               data-share-badge-host="https://www.credly.com"
             ></div>
           </div>
-          <div className='flex justify-center items-center'>
+          {/* Badge 3 */}
+          <div className="flex justify-center items-center">
             <div
               data-iframe-width="180"
               data-iframe-height="235"
               data-share-badge-id="6b368269-26eb-46d1-85ca-143277e078d8"
-              data-share-badge-host="https://www.credly.com"></div>
+              data-share-badge-host="https://www.credly.com"
+            ></div>
           </div>
         </div>
       </div>
