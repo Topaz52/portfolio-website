@@ -7,11 +7,27 @@ import { motion, useAnimation } from 'framer-motion';
 const projectsData = [
     {
         id: 1,
+        title: "SUTERA 3.0",
+        description: "SUTERA 3.0 (Sistem Untuk Rejimen Askar Jurutera Diraja, Kenderaan Jenis C) is a web-based system designed for the Royal Engineers Regiment to manage detailed information and repair statuses (Repair, Usable, Unusable, Good Under Observation) of their Earthmoving, Support, and Construction machinery, featuring an interactive dashboard and automated monthly reports.",
+        urlLink: "",
+        githubLink: "",
+        techStack: "PHP 8, Laravel 11, JavaScript, TailwindCSS, Composer, Blade, Docker, MySQL 8"
+    },
+    {
+        id: 1,
+        title: "EMESYS 4.0",
+        description: "EMESYS (Sistem Senggaraan Kejuruteraan Tentera Darat) is a specialized engineering maintenance system for the Malaysian Army, focusing on Kenderaan Jenis A (KJA), Kenderaan Jenis B (KJB), and a diverse range of Various Tools and Weapons. This system streamlines the repair process for all these assets, making it easy for users to update their status as Boleh Guna (BG - Usable) or Tidak Boleh Guna (TBG - Unusable). EMESYS also features advanced generated reports and a complex Role-Based Access Control (RBAC) system to ensure data security and operational efficiency.",
+        urlLink: "https://emesys.army.mil.my/#/login",
+        githubLink: "",
+        techStack: "PHP 8, Laravel 11, Vue.js, Typescript, TailwindCSS, Composer, Laravel Sanctum API, Docker, MariaDB"
+    },
+    {
+        id: 2,
         title: "EKESAM",
         description: "EKESAM is designed to enhance operational readiness by ensuring that critical military assets remain updated and readily available. The system provides decision-makers with actionable insights into resource statuses, fostering proactive management and strategic planning. EKESAM is a secure, internal system developed to streamline and manage the Kesam catalog for use by higher-ranking military personnel.",
         urlLink: "",
         githubLink: "",
-        techStack: "PHP, Symphony, JavaScript, Bootstrap"
+        techStack: "PHP 7, Symphony, JavaScript, Bootstrap, MySQL 7"
     },
     {
         id: 2,
