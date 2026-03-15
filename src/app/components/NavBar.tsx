@@ -5,6 +5,7 @@ import NavLink from './NavLink'
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
 import MenuOverlay from './MenuOverlay'
 import Image from 'next/image'
+import { FaExternalLinkAlt } from "react-icons/fa"
 
 const navLinks = [
     {
@@ -23,13 +24,7 @@ const navLinks = [
         title: "Blog",
         path: "https://blog.ismailmasseran.com/",
         icon: (
-            <Image
-                src="/icons8-new-tab.svg"
-                alt="New Tab"
-                width={16}
-                height={16}
-                className="ml-1"
-            />
+            <FaExternalLinkAlt className='w-3 h-3 ml-1 text-white' />
         ),
         target: "_blank"
     }

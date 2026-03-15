@@ -1,8 +1,40 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 
 const CertificatesSection = () => {
+  const sectionRef = useRef(null);
+  const [inView, setInView] = useState(false);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    controls.start({
+      opacity: inView ? 1 : 0,
+      y: inView ? 0 : 50,
+      transition: { duration: 0.5 },
+    });
+  }, [inView, controls]);
+
   useEffect(() => {
     // Load the Credly embed script dynamically after the component mounts
     const script = document.createElement('script');
@@ -12,11 +44,12 @@ const CertificatesSection = () => {
   }, []);
 
   return (
-    <section className="py-5 text-center">
-      {/* Heading for BADGES AND CERTIFICATES */}
-      {/* Uncomment the heading if needed */}
-      {/* <h1 className="text-center text-3xl md:text-5xl mb-5 font-bold p-5">BADGES AND CERTIFICATES</h1> */}
-      <div className="w-full md:w-[calc(50%-2.5rem)] bg-primary-400 p-4 rounded-xl shadow mx-auto">
+    <section id="certificates" className="py-5 text-center">
+      <motion.div animate={controls} ref={sectionRef}>
+        <h2 className="text-white text-3xl md:text-5xl font-bold mb-8 mt-5 px-5">
+          BADGES AND CERTIFICATES
+        </h2>
+        <div className="w-full md:w-[calc(50%-2.5rem)] bg-primary-400 p-4 rounded-xl shadow mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {/* Badge 1 */}
           <div className="flex justify-center items-center">
@@ -47,6 +80,7 @@ const CertificatesSection = () => {
           </div>
         </div>
       </div>
+      </motion.div>
     </section>
   );
 };

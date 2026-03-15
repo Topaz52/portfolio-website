@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface ProjectCardProps {
     title: string;
@@ -6,16 +7,26 @@ interface ProjectCardProps {
     urlLink: string;
     githubLink: string;
     techStack: string;
+    logo?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, urlLink, githubLink, techStack }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, urlLink, githubLink, techStack, logo }) => {
     const techList = techStack.split(', ');
 
     return (
         <div className="bg-primary-800 rounded-xl p-6 shadow-lg">
             <div className="flex justify-between items-center mb-4">
-                <a href={urlLink} target="_blank" rel="noopener noreferrer">
-                    <h3 className="text-white text-xl md:text-lg font-extrabold hover:underline hover:text-secondary-500 transition-colors">
+                <a href={urlLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 min-w-0 flex-1">
+                    {logo && (
+                        <Image
+                            src={logo}
+                            alt=""
+                            width={32}
+                            height={32}
+                            className="flex-shrink-0 rounded object-contain w-8 h-8"
+                        />
+                    )}
+                    <h3 className="text-white text-xl md:text-lg font-extrabold hover:underline hover:text-secondary-500 transition-colors truncate">
                         {title}
                     </h3>
                 </a>
@@ -23,7 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, urlLink, 
                     href={githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-secondary-800 hover:bg-secondary-500 text-white py-1 px-3 rounded-lg text-sm flex items-center space-x-2"
+                    className="bg-secondary-800 hover:bg-secondary-500 text-white py-1 px-3 rounded-lg text-sm flex items-center space-x-2 flex-shrink-0"
                 >
                     <span>GITHUB</span>
                     {/* GitHub Icon */}

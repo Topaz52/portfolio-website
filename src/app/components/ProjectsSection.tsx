@@ -4,30 +4,43 @@ import React, { useRef, useState, useEffect } from 'react'
 import ProjectCard from './ProjectCard'
 import { motion, useAnimation } from 'framer-motion';
 
-const projectsData = [
+interface ProjectData {
+    id: number;
+    title: string;
+    description: string;
+    urlLink: string;
+    githubLink: string;
+    techStack: string;
+    logo?: string;
+}
+
+const projectsData: ProjectData[] = [
     {
-        id: 1,
-        title: "SUTERA 3.0",
-        description: "SUTERA 3.0 (Sistem Untuk Rejimen Askar Jurutera Diraja, Kenderaan Jenis C) is a web-based system designed for the Royal Engineers Regiment to manage detailed information and repair statuses (Repair, Usable, Unusable, Good Under Observation) of their Earthmoving, Support, and Construction machinery, featuring an interactive dashboard and automated monthly reports.",
-        urlLink: "",
+        id: 0,
+        title: "EMESYS 4.1",
+        logo: "/images/kjljd-logo.png",
+        description: "EMESYS (Army Engineering Maintenance System) is a web-based system designed to manage and monitor the maintenance and inventory of Malaysian Army engineering assets. The system enables users to record, update, and track asset information, maintenance activities, and operational status efficiently. EMESYS supports multiple asset categories including Type A Vehicles(KJA), KJB vehicles, weapons, electronic equipment, Miscellaneous Equipment A, and Miscellaneous Equipment B.The platform helps improve asset visibility, maintenance planning, and data management for military engineering operations.",
+        urlLink: "https://emesys.army.mil.my/#/login",
         githubLink: "",
-        techStack: "PHP 8, Laravel 11, JavaScript, TailwindCSS, Composer, Blade, Docker, MySQL 8"
+        techStack: "PHP, Laravel, Vue.js, Typescript, TailwindCSS, Composer, Laravel Sanctum API, Docker, MariaDB, Gitea, CI/CD"
     },
     {
         id: 1,
-        title: "EMESYS 4.0",
-        description: "EMESYS (Sistem Senggaraan Kejuruteraan Tentera Darat) is a specialized engineering maintenance system for the Malaysian Army, focusing on Kenderaan Jenis A (KJA), Kenderaan Jenis B (KJB), and a diverse range of Various Tools and Weapons. This system streamlines the repair process for all these assets, making it easy for users to update their status as Boleh Guna (BG - Usable) or Tidak Boleh Guna (TBG - Unusable). EMESYS also features advanced generated reports and a complex Role-Based Access Control (RBAC) system to ensure data security and operational efficiency.",
-        urlLink: "https://emesys.army.mil.my/#/login",
+        title: "SUTERA 3.0",
+        logo: "/images/rajd-logo.png",
+        description: "SUTERA 3.0 (Sistem Untuk Rejimen Askar Jurutera Diraja, Type C Vehicles) is a web-based system designed for the Royal Engineers Regiment to manage detailed information and repair statuses (Repair, Usable, Unusable, Good Under Observation) of their Earthmoving, Support, and Construction machinery, featuring an interactive dashboard and automated monthly reports.",
+        urlLink: "",
         githubLink: "",
-        techStack: "PHP 8, Laravel 11, Vue.js, Typescript, TailwindCSS, Composer, Laravel Sanctum API, Docker, MariaDB"
+        techStack: "PHP, Laravel, Vue.js, Typescript, SCSS, Composer, Laravel Sanctum API, Docker, PostgreSQL, Gitea, CI/CD"
     },
     {
         id: 2,
         title: "EKESAM",
-        description: "EKESAM is designed to enhance operational readiness by ensuring that critical military assets remain updated and readily available. The system provides decision-makers with actionable insights into resource statuses, fostering proactive management and strategic planning. EKESAM is a secure, internal system developed to streamline and manage the Kesam catalog for use by higher-ranking military personnel.",
+        logo: "/images/bpptd-logo.png",
+        description: "EKESAM is a web-based system that helps manage and track military assets efficiently. It provides users with clear insights into resource information, streamlining operations and improving overall system management.",
         urlLink: "",
         githubLink: "",
-        techStack: "PHP 7, Symphony, JavaScript, Bootstrap, MySQL 7"
+        techStack: "PHP, Symphony, JavaScript, Bootstrap, MySQL"
     },
     {
         id: 2,
@@ -135,6 +148,7 @@ const ProjectsSection = () => {
                                 urlLink={project.urlLink}
                                 githubLink={project.githubLink}
                                 techStack={project.techStack}
+                                logo={project.logo}
                             />
                         )}
                     </div>
