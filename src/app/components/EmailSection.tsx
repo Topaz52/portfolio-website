@@ -2,12 +2,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha'
 import { motion, useAnimation } from 'framer-motion';
-import Image from 'next/image'
-import FacebookIcon from '/public/icons8-facebook.svg'
-import LinkedInIcon from '/public/icons8-linkedin.svg'
-import GithubIcon from '/public/icons8-github.svg'
 import Link from 'next/link'
-import MailIcon from '/public/icons8-mail.png'
+import { FaFacebook, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"
 
 const EmailSection = () => {
     const [formData, setFormData] = useState({
@@ -113,16 +109,16 @@ const EmailSection = () => {
                 </p>
                 <div className='md:flex md:items-center md:text-center md:gap-4 hidden'>
                     <Link href="mailto:ismailmasseran1@gmail.com">
-                        <Image src={MailIcon} alt="Mail Icon" />
+                        <FaEnvelope className='w-8 h-8 text-white' />
                     </Link>
                     <Link href="https://github.com/Topaz52" target="_blank">
-                        <Image src={GithubIcon} alt="Github Icon" />
+                        <FaGithub className='w-8 h-8 text-white' />
                     </Link>
                     <Link href="https://www.linkedin.com/in/ismailmasseran/" target="_blank">
-                        <Image src={LinkedInIcon} alt="Linkedin Icon" />
+                        <FaLinkedin className='w-8 h-8 text-white' />
                     </Link>
                     <Link href="https://www.facebook.com/ismailmasseran3/" target="_blank">
-                        <Image src={FacebookIcon} alt="Facebook Icon" />
+                        <FaFacebook className='w-8 h-8 text-white' />
                     </Link>
                 </div>
             </motion.div>

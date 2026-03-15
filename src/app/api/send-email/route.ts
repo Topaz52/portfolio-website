@@ -1,23 +1,19 @@
 import { NextResponse } from 'next/server';
-import AWS from 'aws-sdk';
+import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
 
 // Configure AWS SES
-AWS.config.update({
-  accessKeyId: process.env.MYAPP_ACCESS_KEY_ID,
-  secretAccessKey: process.env.MYAPP_SECRET_ACCESS_KEY,
+const ses = new SESClient({
   region: 'us-east-1', // e.g., 'us-east-1'
 });
-
-const ses = new AWS.SES();
 
 export async function POST(req: Request) {
   try {
     const { name, email, subject, message } = await req.json();
 
     const params = {
-      Source: 'me@ismailmasseran.com', // Replace with an email address in your verified domain
+      Source: 'me@ismailmasseran.com',
       Destination: {
-        ToAddresses: ['isml.msrn11@gmail.com'], // Replace with your email address
+        ToAddresses: ['isml.msrn11@gmail.com'],
       },
       Message: {
         Subject: {
@@ -31,7 +27,7 @@ export async function POST(req: Request) {
       },
     };
 
-    await ses.sendEmail(params).promise();
+    await ses.send(new SendEmailCommand(params));
     return NextResponse.json({ message: 'Email sent successfully' });
   } catch (error) {
     console.error('Error sending email:', error); // Log error to the console

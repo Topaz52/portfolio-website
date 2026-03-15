@@ -1,17 +1,43 @@
 "use client"
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import Image from 'next/image'
-import FacebookIcon from '/public/icons8-facebook.svg'
-import LinkedInIcon from '/public/icons8-linkedin.svg'
-import GithubIcon from '/public/icons8-github.svg'
+import { FaFacebook, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"
 import ProfilePic from '/public/images/profile-pic.png'
-import MailIcon from '/public/icons8-mail.png'
 import Link from 'next/link'
-import { motion } from "framer-motion"
-import { useState } from 'react';
+import { motion, useAnimation } from "framer-motion";
 
 const HomeSection = () => {
     const [loading, setLoading] = useState(false);
+    const sectionRef = useRef(null);
+    const [inView, setInView] = useState(false);
+    const controls = useAnimation();
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setInView(entry.isIntersecting);
+            },
+            { threshold: 0.1 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        controls.start({
+            opacity: inView ? 1 : 0,
+            y: inView ? 0 : 50,
+            transition: { duration: 0.5 },
+        });
+    }, [inView, controls]);
 
     const handleDownload = () => {
         setLoading(true);
@@ -27,11 +53,10 @@ const HomeSection = () => {
         }, 2000);
     };
     return (
-        <section>
+        <section className="lg:sticky lg:top-24">
             <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
+                animate={controls}
+                ref={sectionRef}
                 className="flex flex-col items-center mt-3">
                 <div className='place-self-center'>
                     <div className="relative rounded-full bg-primary-500 w-[180px] h-[180px] flex items-center justify-center">
@@ -43,33 +68,27 @@ const HomeSection = () => {
                             height={180}
                         />
                     </div>
+                    <div className='socials flex flex-row gap-5 justify-center mt-4'>
+                        <Link href="https://github.com/Topaz52" target="_blank">
+                            <FaGithub className='w-8 h-8 text-white' />
+                        </Link>
+                        <Link href="https://www.linkedin.com/in/ismailmasseran/" target="_blank">
+                            <FaLinkedin className='w-8 h-8 text-white' />
+                        </Link>
+                        <Link href="https://web.facebook.com/ismailmasseran3/" target="_blank">
+                            <FaFacebook className='w-8 h-8 text-white' />
+                        </Link>
+                        <Link href="mailto:ismailmasseran1@gmail.com">
+                            <FaEnvelope className='w-8 h-8 text-white' />
+                        </Link>
+                    </div>
                 </div>
                 <div className="col-span-5 place-self-center mt-8 text-center">
                     <h1 className='text-white mb-4 text-2xl font-extrabold lg:text-6xl'>
                         ISMAIL MASSERAN
                     </h1>
-                    <h3 className='text-sm lg:text-sm mb-5 text-gray-400'>
-                        {/* <a href="mailto:ismailmasseran1@gmail.com" className="hover:underline">
-                            ismailmasseran1@gmail.com
-                        </a> */}
-                    </h3>
-                    <div className='socials flex flex-row lg:flex-col lg:top-1/4 lg:left-8 lg:absolute gap-5 justify-center mb-5'>
-                        <Link href="https://github.com/Topaz52" target="_blank">
-                            <Image src={GithubIcon} alt="Github Icon" />
-                        </Link>
-                        <Link href="https://www.linkedin.com/in/ismailmasseran/" target="_blank">
-                            <Image src={LinkedInIcon} alt="Linkedin Icon" />
-                        </Link>
-                        <Link href="https://www.facebook.com/ismailmasseran3/" target="_blank">
-                            <Image src={FacebookIcon} alt="Facebook Icon" />
-                        </Link>
-                        <Link href="mailto:ismailmasseran1@gmail.com">
-                            <Image src={MailIcon} alt="Mail Icon" />
-                        </Link>
-                    </div>
                     <p className='text-md lg:text-xl font-extralight lg:max-w-xl mb-3'>
-                        Aspiring Data Scientist with a strong academic foundation and a passion for uncovering insights from data.
-                    </p>
+                        Full Stack Developer specializing in building modern and scalable web-based applications.                    </p>
                 </div>
                 <button
                     type='button'
